@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BlogController!{% endblock %}
+
+{% block body %}
+
+    {% for art in products %}
+    <div class="container d-flex border">
+        <div class="col-8">
+            <h2>{{ art.name|upper }}</h2>
+            <p>{{ art.price }}</p>
+            <p>{{ art.createdAt|date('d/m/Y') }}</p>
+        </div>
+    </div>
+    {% endfor %}
+
+{% endblock %}
