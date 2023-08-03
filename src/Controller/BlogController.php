@@ -43,4 +43,17 @@ class BlogController extends AbstractController
             'products' => $products,
         ]);
     }
+
+    #[Route('last-article', name: 'last_article')]
+    public function lastBlogArticle(){
+
+        $blog = [
+            'title' => "toto"
+        ];
+
+        return $this->render('partials/_last_blog_article.html.twig', [
+            'blog' => $blog
+        ]);
+    }
+
 }

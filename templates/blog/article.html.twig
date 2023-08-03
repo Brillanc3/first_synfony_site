@@ -4,6 +4,8 @@
 
 {% block body %}
 
+    {{render(controller('App\\Controller\\BlogController::last_article'))}}
+
     {% for art in products %}
     <div class="container d-flex border">
         <div class="col-8">
